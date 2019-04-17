@@ -1,6 +1,7 @@
 */.classpath
 */.project
-*/*.class
+*.class
 */*/*/*/*/*.class
 */*/*/*/*/*/*.class
+CalcEngine/bin/com/pluralsight/*
 */*/.gitignore

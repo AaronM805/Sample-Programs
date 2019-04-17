@@ -2,6 +2,7 @@ package com.pluralsight.calcengine;
 
 import com.pluralsight.calcengine.compute.Adder;
 import com.pluralsight.calcengine.compute.Compute;
+import com.pluralsight.calcengine.compute.ComputeHelper;
 import com.pluralsight.calcengine.compute.Divider;
 import com.pluralsight.calcengine.compute.Subtracter;
 import com.pluralsight.calcengine.compute.Multiplier;
@@ -39,7 +40,14 @@ public class CalcEngine {
 			"add 45.0 60.0", // 45.0 + 60.0 = 105.0
 			"subtract 100.0 25.0", // 100.0 - 25.0 = 75.0
 			"multiply 35.0 15.0" // 35.0 * 15.0 = 525.0
-		};	
+		};
+		
+		ComputeHelper helper = new ComputeHelper();
+		
+		for(String statement: statements) {
+			helper.process(statement);
+			System.out.println(helper);
+		}
 	}
 	
 	public void useComputeOperations() {
